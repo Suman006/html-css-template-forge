@@ -170,6 +170,7 @@ body {
     .foot-tile {
         border-right: none !important;
     }
+
     .foot-img img {
         width: 300px;
         margin-right: 10px;
@@ -232,6 +233,7 @@ body {
     .blog-content {
         top: 55% !important;
     }
+
     .blog-3-img .blog-3 {
         top: 35% !important;
     }
@@ -257,7 +259,6 @@ body {
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    /* position: absolute; */
     top: 0;
     width: 100%;
 }
@@ -299,6 +300,7 @@ body {
     font-weight: 600;
     border-radius: 6px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .hero-btn2 {
@@ -310,6 +312,25 @@ body {
     font-weight: 600;
     border-radius: 6px;
     background: #00000059;
+    cursor: pointer;
+}
+
+/* Hover effect for buttons */
+
+.hero-btn:hover {
+    transform: scale(1.1);
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: 0.7s;
+}
+
+.hero-btn2:hover {
+    transform: scale(1.1);
+    background-color: #333333;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: 0.7s;
 }
 
 /* Hero-section style end here */
@@ -440,12 +461,23 @@ h4 {
     position: relative;
     padding: 30px 0px 0px 0px;
     border-radius: 12px;
+    cursor: pointer;
 }
 
 .transact-content {
     position: absolute;
     top: 5px;
     left: 32px;
+}
+
+.transact-card {
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.transact-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Track section style end */
@@ -471,6 +503,15 @@ h4 {
     border-radius: 50px;
     font-family: "Inter", sans-serif;
     font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.lap-btn .create-btn:hover {
+    background: #3a3f32;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: 0.7s;
 }
 
 /* lap-section style end */
@@ -494,6 +535,8 @@ h4 {
     gap: 32px;
 }
 
+/* blog-section style start */
+
 .blog-img {
     border-radius: 15px;
     height: 662px;
@@ -511,6 +554,26 @@ h4 {
 .blog-3 {
     top: 40%;
 }
+
+.blog-img {
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.blog-left {
+    transform: translateX(-50px);
+}
+
+.blog-right {
+    transform: translateX(50px);
+}
+
+.blog-img.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Blog-section style end*/
 
 /* footer style start */
 
